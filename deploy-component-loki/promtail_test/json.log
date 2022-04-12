@@ -1,0 +1,6 @@
+nohup: ignoring input
+level=info ts=2021-07-12T06:40:16.630085521Z caller=server.go:225 http=[::]:9080 grpc=[::]:39089 msg="server listening on addresses"
+level=info ts=2021-07-12T06:40:16.630589641Z caller=main.go:108 msg="Starting Promtail" version="(version=2.0.0, branch=HEAD, revision=6978ee5d)"
+level=info ts=2021-07-12T06:40:21.629889725Z caller=filetargetmanager.go:261 msg="Adding target" key="{host=\"172.18.8.203\", job=\"varlogs\"}"
+level=info ts=2021-07-12T06:40:21.630886915Z caller=tailer.go:122 component=tailer msg="tail routine: started" path=/var/log/harbor/core.log
+ts=2021-07-12T06:40:21.631012539Z caller=log.go:124 component=tailer level=info msg="Seeked /var/log/harbor/core.log - &{Offset:1056236 Whence:0}"

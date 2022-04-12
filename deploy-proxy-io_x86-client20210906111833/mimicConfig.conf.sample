@@ -1,0 +1,17 @@
+DPDK版本：
+RunningMode: User
+LocationID: 1
+SerialID: 2
+NicNum: 2
+ImportIP: 100.200.0.206
+ExportIP: 100.200.0.206
+Gateway: 100.200.0.1
+NginxPath: /usr/local/nginx_fstack/sbin/nginx
+
+内核版本：
+RunningMode: Kernel
+LocationID: 1
+SerialID: 2
+ImportIP: 100.200.0.206
+ExportIP: 100.200.0.206
+NginxPath: /usr/local/nginx_fstack/sbin/nginx

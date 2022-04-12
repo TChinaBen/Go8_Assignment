@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: rules-hello
+  namespace: loki
+  labels:
+    rules4tenant: hello
+data:
+  rules.yaml: |
+    groups:
+    - name: example
+      rules:
+      - alert: nowhelloError
+        expr: count_over_time({level="warn"}[1m]) > 0
+        for: 1m
+      - alert: nowError
+        expr: count_over_time({pod="alertmanager-main-0", level="warn"}[1m]) > 10
+        for: 1m

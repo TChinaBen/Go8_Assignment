@@ -1,0 +1,27 @@
+server:
+  http_listen_port: 9080
+  grpc_listen_port: 0
+positions:
+  filename: /var/log/positions.yaml # 这个位置需要是可以被promtail写入的
+client:
+  url: http://172.18.8.203:30549/loki/api/v1/push
+scrape_configs:
+      - job_name: system
+        pipeline_stages:
+          - tenant:
+              value: system
+          - regex:
+              expression: ".*\\W?(?P<level>(?i)fatal|error|warn|info|debug)\\W.*"
+          - template:
+              source: level
+              template: '{{if .Value}}{{ToLower .Value}}{{else}}unknown{{end}}'
+          - labels:
+              level:
+
+        static_configs:
+           - targets:
+               - localhost 
+             labels:
+               job: varlogs # 在 Prometheus中，job 标签对于连接指标和日志很有用
+               host: 172.18.8.203 # `host` 标签可以帮助识别日志来源
+               __path__: /var/log/harbor/core.log

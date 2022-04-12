@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ruler-other
+  namespace: loki
+  labels:
+    rules4tenant: other
+data:
+  rules.yaml: |
+    groups:
+    - name: example
+      rules:
+      - alert: helloPercentInfo
+        expr: sum by(level)(rate({level="info"}[1m])) > 1
+        for: 1m
+      - alert: errorPercentInfo
+        expr: sum by(level)(rate({level="error"}[1m])) > 1
+        for: 1m
+      - alert: podPercentInfo
+        expr: sum by(pod)(rate({level="info"}[1m])) > 1
+        for: 1m
+   

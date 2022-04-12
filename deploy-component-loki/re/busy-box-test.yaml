@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busy-box-test
+  namespace: default
+spec:
+  restartPolicy: OnFailure
+  containers:
+  - name: busy-box-test
+    image: busybox
+    imagePullPolicy: IfNotPresent
+    volumeMounts:
+    - name: date-config
+      mountPath: /etc/localtime
+    command: ["sleep", "60000"]
+  volumes:
+  - name: date-config
+    hostPath:
+      path: /etc/localtime

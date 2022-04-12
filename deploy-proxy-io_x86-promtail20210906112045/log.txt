@@ -1,0 +1,43 @@
+level=info ts=2021-09-06T03:18:30.646323896Z caller=server.go:229 http=[::]:9080 grpc=[::]:39668 msg="server listening on addresses"
+level=info ts=2021-09-06T03:18:30.646626884Z caller=main.go:112 msg="Starting Promtail" version="(version=2.2.1, branch=HEAD, revision=babea82e)"
+level=info ts=2021-09-06T03:18:35.646484155Z caller=filetargetmanager.go:254 msg="Adding target" key="{location=\"f58a4409-320c-492a-aeb1-bd999e3111fb\", serial=\"95265dc0-2aaa-49d6-b064-c3f734cae77d\", type=\"io\"}"
+level=info ts=2021-09-06T03:18:35.646903153Z caller=filetargetmanager.go:254 msg="Adding target" key="{location=\"f58a4409-320c-492a-aeb1-bd999e3111fb\", serial=\"95265dc0-2aaa-49d6-b064-c3f734cae77d\", type=\"client_io\"}"
+level=info ts=2021-09-06T03:18:35.646912578Z caller=tailer.go:125 component=tailer msg="tail routine: started" path=/usr/local/nginx/logs/error.log
+level=info ts=2021-09-06T03:18:35.647165402Z caller=tailer.go:125 component=tailer msg="tail routine: started" path=/root/deploy-proxy-io_x86-client20210906111833/log.txt
+ts=2021-09-06T03:18:35.648107098Z caller=log.go:124 level=info msg="Seeked /root/deploy-proxy-io_x86-client20210906111833/log.txt - &{Offset:0 Whence:0}"
+ts=2021-09-06T03:18:35.648137481Z caller=log.go:124 level=info msg="Seeked /usr/local/nginx/logs/error.log - &{Offset:0 Whence:0}"
+level=warn ts=2021-09-06T03:18:36.755182077Z caller=client.go:323 component=client host=172.18.8.203:30549 msg="error sending batch, will retry" status=-1 error="Post \"http://172.18.8.203:30549/loki/api/v1/push\": dial tcp 172.18.8.203:30549: connect: connection refused"
+level=warn ts=2021-09-06T03:18:37.524940888Z caller=client.go:323 component=client host=172.18.8.203:30549 msg="error sending batch, will retry" status=-1 error="Post \"http://172.18.8.203:30549/loki/api/v1/push\": dial tcp 172.18.8.203:30549: connect: connection refused"
+level=warn ts=2021-09-06T03:18:39.373942148Z caller=client.go:323 component=client host=172.18.8.203:30549 msg="error sending batch, will retry" status=-1 error="Post \"http://172.18.8.203:30549/loki/api/v1/push\": dial tcp 172.18.8.203:30549: connect: connection refused"
+level=warn ts=2021-09-06T03:18:42.769283547Z caller=client.go:323 component=client host=172.18.8.203:30549 msg="error sending batch, will retry" status=-1 error="Post \"http://172.18.8.203:30549/loki/api/v1/push\": dial tcp 172.18.8.203:30549: connect: connection refused"
+level=warn ts=2021-09-06T03:18:50.362887944Z caller=client.go:323 component=client host=172.18.8.203:30549 msg="error sending batch, will retry" status=-1 error="Post \"http://172.18.8.203:30549/loki/api/v1/push\": dial tcp 172.18.8.203:30549: connect: connection refused"
+level=warn ts=2021-09-06T03:19:05.248332657Z caller=client.go:323 component=client host=172.18.8.203:30549 msg="error sending batch, will retry" status=502 error="server returned HTTP status 502 Bad Gateway (502): <html>"
+ts=2021-09-06T03:21:24.137286055Z caller=log.go:124 level=info msg="Seeked /usr/local/nginx/logs/notice.log - &{Offset:0 Whence:0}"
+level=info ts=2021-09-06T03:21:24.137264608Z caller=tailer.go:125 component=tailer msg="tail routine: started" path=/usr/local/nginx/logs/notice.log
+level=info ts=2021-09-06T03:24:22.725577962Z caller=signals.go:55 msg="=== received SIGINT/SIGTERM ===\n*** exiting"
+level=info ts=2021-09-06T03:24:23.226262489Z caller=filetargetmanager.go:315 msg="Removing target" key="{location=\"f58a4409-320c-492a-aeb1-bd999e3111fb\", serial=\"95265dc0-2aaa-49d6-b064-c3f734cae77d\", type=\"io\"}"
+level=info ts=2021-09-06T03:24:23.226565496Z caller=tailer.go:98 component=tailer msg="position timer: exited" path=/usr/local/nginx/logs/error.log
+level=info ts=2021-09-06T03:24:23.226735505Z caller=tailer.go:141 component=tailer msg="tail routine: tail channel closed, stopping tailer" path=/usr/local/nginx/logs/error.log reason=null
+level=info ts=2021-09-06T03:24:23.226776209Z caller=tailer.go:134 component=tailer msg="tail routine: exited" path=/usr/local/nginx/logs/error.log
+level=info ts=2021-09-06T03:24:23.226801397Z caller=tailer.go:211 component=tailer msg="stopped tailing file" path=/usr/local/nginx/logs/error.log
+level=info ts=2021-09-06T03:24:23.226855372Z caller=tailer.go:98 component=tailer msg="position timer: exited" path=/usr/local/nginx/logs/notice.log
+level=info ts=2021-09-06T03:24:23.226913787Z caller=tailer.go:141 component=tailer msg="tail routine: tail channel closed, stopping tailer" path=/usr/local/nginx/logs/notice.log reason=null
+level=info ts=2021-09-06T03:24:23.226942457Z caller=tailer.go:134 component=tailer msg="tail routine: exited" path=/usr/local/nginx/logs/notice.log
+level=info ts=2021-09-06T03:24:23.226965944Z caller=tailer.go:211 component=tailer msg="stopped tailing file" path=/usr/local/nginx/logs/notice.log
+level=info ts=2021-09-06T03:24:23.227000177Z caller=filetarget.go:150 msg="filetarget: watcher closed, tailer stopped, positions saved" path=/usr/local/nginx/logs/*log
+level=info ts=2021-09-06T03:24:23.227060159Z caller=filetargetmanager.go:315 msg="Removing target" key="{location=\"f58a4409-320c-492a-aeb1-bd999e3111fb\", serial=\"95265dc0-2aaa-49d6-b064-c3f734cae77d\", type=\"client_io\"}"
+level=info ts=2021-09-06T03:24:23.227276923Z caller=tailer.go:98 component=tailer msg="position timer: exited" path=/root/deploy-proxy-io_x86-client20210906111833/log.txt
+level=info ts=2021-09-06T03:24:23.227383563Z caller=tailer.go:141 component=tailer msg="tail routine: tail channel closed, stopping tailer" path=/root/deploy-proxy-io_x86-client20210906111833/log.txt reason=null
+level=info ts=2021-09-06T03:24:23.227419863Z caller=tailer.go:134 component=tailer msg="tail routine: exited" path=/root/deploy-proxy-io_x86-client20210906111833/log.txt
+level=info ts=2021-09-06T03:24:23.227444918Z caller=tailer.go:211 component=tailer msg="stopped tailing file" path=/root/deploy-proxy-io_x86-client20210906111833/log.txt
+level=info ts=2021-09-06T03:24:23.22750215Z caller=filetarget.go:150 msg="filetarget: watcher closed, tailer stopped, positions saved" path=/root/deploy-proxy-io_x86-client20210906111833/log.txt
+level=info ts=2021-09-07T10:16:59.36735608Z caller=server.go:229 http=[::]:9080 grpc=[::]:33764 msg="server listening on addresses"
+level=info ts=2021-09-07T10:16:59.368792051Z caller=main.go:112 msg="Starting Promtail" version="(version=2.2.1, branch=HEAD, revision=babea82e)"
+level=info ts=2021-09-07T10:17:04.367363574Z caller=filetargetmanager.go:254 msg="Adding target" key="{location=\"f58a4409-320c-492a-aeb1-bd999e3111fb\", serial=\"95265dc0-2aaa-49d6-b064-c3f734cae77d\", type=\"io\"}"
+level=info ts=2021-09-07T10:17:04.367857569Z caller=filetargetmanager.go:254 msg="Adding target" key="{location=\"f58a4409-320c-492a-aeb1-bd999e3111fb\", serial=\"95265dc0-2aaa-49d6-b064-c3f734cae77d\", type=\"client_io\"}"
+level=info ts=2021-09-07T10:17:04.367830159Z caller=tailer.go:125 component=tailer msg="tail routine: started" path=/usr/local/nginx/logs/error.log
+level=info ts=2021-09-07T10:17:04.367889736Z caller=tailer.go:125 component=tailer msg="tail routine: started" path=/usr/local/nginx/logs/notice.log
+level=info ts=2021-09-07T10:17:04.368175015Z caller=tailer.go:125 component=tailer msg="tail routine: started" path=/root/deploy-proxy-io_x86-client20210906111833/log.txt
+ts=2021-09-07T10:17:04.369175093Z caller=log.go:124 level=info msg="Seeked /root/deploy-proxy-io_x86-client20210906111833/log.txt - &{Offset:18031 Whence:0}"
+ts=2021-09-07T10:17:04.369200528Z caller=log.go:124 level=info msg="Seeked /usr/local/nginx/logs/notice.log - &{Offset:3197 Whence:0}"
+ts=2021-09-07T10:17:04.36922886Z caller=log.go:124 level=info msg="Seeked /usr/local/nginx/logs/error.log - &{Offset:5318 Whence:0}"

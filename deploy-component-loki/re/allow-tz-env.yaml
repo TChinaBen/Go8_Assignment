@@ -1,0 +1,15 @@
+apiVersion: settings.k8s.io/v1alpha1
+kind: PodPreset
+metadata:
+  name: allow-tz-env
+  namespace: loki
+spec:
+  selector:
+    matchLabels:
+  volumeMounts:
+    - mountPath: /etc/localtime
+      name: time
+  volumes: 
+    - name: time
+      hostPath:
+        path: /etc/localtime
